@@ -5,15 +5,19 @@ def hackingLanguage():
     
     text = "Javier, el hábil zapatero, trabajaba con destreza en su pequeño taller. Su bufanda azul ondeaba mientras tarareaba alegremente una canción antigua. Con una taza de té caliente en la mano, examinaba cuidadosamente cada zapato, buscando imperfecciones. De repente, un zumbido interrumpió su rutina tranquila: ¡un abejorro curioso exploraba las flores de un jardín cercano! Javier, asombrado, observó cómo el insecto se movía entre las violetas y los girasoles, llevando consigo la esencia de la primavera. Con una sonrisa, retomó su labor, disfrutando de la paz que le brindaba su oficio y la naturaleza circundante."
     
-    list = []
-    i = 0
- 
-    for letter in text:
-        list.append(letter)
-        return list
+    # list = []
+    # i = 0
+    listing = list(text.strip())
+    # for letter in text:
+    #     list.append(letter)
+    #     return list
+    return listing
     # for i in ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]:
     # for i in range(len(list)):
-    while i < len(list):
+
+def gettingHack(listing):
+    
+    for i in range(listing):
         
         if i == "a":
             letter1 = "4"
@@ -120,8 +124,8 @@ def hackingLanguage():
             print(i)
         else:
             print("Otra letra")
-                
-hackingLanguage()
+            
+gettingHack(hackingLanguage())
 
 #from string solution
 #convert a string to a list and iterate it
