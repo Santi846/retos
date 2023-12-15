@@ -3,11 +3,11 @@
 #END cases
 def hackingLanguage():
     
-    text = "Javier, el hábil zapatero, trabajaba con destreza en su pequeño taller. Su bufanda azul ondeaba mientras tarareaba alegremente una canción antigua. Con una taza de té caliente en la mano, examinaba cuidadosamente cada zapato, buscando imperfecciones. De repente, un zumbido interrumpió su rutina tranquila: ¡un abejorro curioso exploraba las flores de un jardín cercano! Javier, asombrado, observó cómo el insecto se movía entre las violetas y los girasoles, llevando consigo la esencia de la primavera. Con una sonrisa, retomó su labor, disfrutando de la paz que le brindaba su oficio y la naturaleza circundante."
+    text = "javier el habil zapatero trabajaba con destreza en su pequeño taller su bufanda azul ondeaba mientras tarareaba alegremente una cancion antigua con una taza de te caliente en la mano examinaba cuidadosamente cada zapato buscando imperfecciones de repente un zumbido interrumpio su rutina tranquila un abejorro curioso exploraba las flores de un jardin cercano javier asombrado observo como el insecto se movia entre las violetas y los girasoles llevando consigo la esencia de la primavera con una sonrisa retomo su labor disfrutando de la paz que le brindaba su oficio y la naturaleza circundante"
     
     # list = []
     # i = 0
-    listing = list(text.strip())
+    listing = text.replace(" ","")
     # for letter in text:
     #     list.append(letter)
     #     return list
@@ -15,10 +15,11 @@ def hackingLanguage():
     # for i in ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]:
     # for i in range(len(list)):
 
-def gettingHack(listing):
+def gettingHack(input):
     
-    for i in range(listing):
-        
+    # for i in range(input):
+    for i in input:
+    
         if i == "a":
             letter1 = "4"
             i = letter1
@@ -123,7 +124,7 @@ def gettingHack(listing):
             i = letter26
             print(i)
         else:
-            print("Otra letra")
+            print(i)
             
 gettingHack(hackingLanguage())
 
