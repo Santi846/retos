@@ -1,12 +1,40 @@
 import secrets
 # import string
+import random
 
-def generatePass():
+upperCaseLetters = "ABCDEFGHIJKLMNLOPQRSTUVWXYZ"
+
+lowerCaseLetters = "abcefghijklmnopqrstuvwxyz"
+
+numbers = "0123456789"
+
+symbols = "!@#$%^&*"
+
+password = ""
+
+def generatePass(upper, lower, nums, syms, password):
     
-    # alphabet = string.ascii_letters + string.digits
-    # password = ''.join(secrets.choice(alphabet) for i in range(16))
-    # return password
-    token = secrets.token_urlsafe(32)
-    return token
+    if upper:
+        password += upper
+        return password
+    elif lower:
+        password += lower
+        return password
+    elif nums:
+        password += nums
+        return password
+    elif syms:
+        password += syms
+        return password
+    
+generatePass(upperCaseLetters, lowerCaseLetters, numbers, symbols, password)
 
-generatePass()
+def setLength(randomPassword):
+    passwordLength = 16
+    amounts = 8
+    
+    for i in range(amounts):
+        randomPassword = "".join(random.sample(password, passwordLength))
+        print(randomPassword)
+        
+setLength(generatePass())
